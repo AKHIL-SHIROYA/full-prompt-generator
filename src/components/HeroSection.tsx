@@ -64,7 +64,7 @@ const HeroSection = () => {
     >
       {/* Background decorative shapes */}
       <motion.div 
-        className="absolute top-1/4 right-[15%] w-64 h-64 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-400/10 blur-3xl"
+        className="absolute top-1/4 right-[15%] w-64 h-64 rounded-full bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900/20 dark:to-blue-800/10 blur-3xl"
         initial="hidden"
         animate="visible"
         variants={shapeVariants}
@@ -72,33 +72,22 @@ const HeroSection = () => {
       />
       
       <motion.div 
-        className="absolute bottom-1/4 left-[10%] w-72 h-72 rounded-full bg-gradient-to-tr from-red-500/20 to-red-400/10 blur-3xl"
+        className="absolute bottom-1/4 left-[10%] w-72 h-72 rounded-full bg-gradient-to-tr from-purple-100 to-purple-50 dark:from-purple-900/20 dark:to-purple-800/10 blur-3xl"
         initial="hidden"
         animate="visible"
         variants={shapeVariants}
         custom={1}
       />
 
-      {/* Main content with task-themed styling */}
+      {/* Main content */}
       <div className="max-w-5xl w-full z-10 text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8"
-        >
-          <span className="inline-block px-6 py-2 bg-red-600 text-white font-bold rounded-lg mb-2">
-            PORTFOLIO WEBSITE
-          </span>
-        </motion.div>
-        
         <motion.h1 
-          className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 task-heading"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 hero-text-gradient"
           initial="hidden"
           animate="visible"
           variants={titleVariants}
         >
-          ADVANCED <span className="text-red-600">ANIMATIONS</span>
+          Crafting Digital Experiences
         </motion.h1>
         
         <motion.p 
@@ -107,8 +96,8 @@ const HeroSection = () => {
           animate="visible"
           variants={subtitleVariants}
         >
-          A showcase of immersive, interactive web experiences with smooth transitions and 
-          captivating effects built with modern animation libraries.
+          A portfolio of immersive, interactive design and development work with a focus on
+          smooth animations and exceptional user experiences.
         </motion.p>
         
         <motion.div
@@ -118,15 +107,15 @@ const HeroSection = () => {
           variants={buttonVariants}
         >
           <motion.button 
-            className="apple-button bg-red-600 text-white"
+            className="apple-button bg-black text-white dark:bg-white dark:text-black"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            View Projects
+            Explore Projects
           </motion.button>
           
           <motion.button 
-            className="apple-button bg-blue-600 text-white"
+            className="apple-button bg-white border border-gray-200 text-gray-900 dark:bg-gray-800 dark:text-white dark:border-gray-700"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -135,19 +124,9 @@ const HeroSection = () => {
         </motion.div>
       </div>
       
-      {/* Task-themed decorative elements */}
-      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-full max-w-md">
-        <div className="flex justify-center space-x-3">
-          {[...Array(8)].map((_, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 + (i * 0.1), duration: 0.5 }}
-              className="w-6 h-6 bg-blue-500 rounded"
-            />
-          ))}
-        </div>
+      {/* Decorative gradient line */}
+      <div className="absolute bottom-12 w-full">
+        <div className="hero-gradient mx-auto max-w-sm" />
       </div>
       
       {/* Scroll indicator */}

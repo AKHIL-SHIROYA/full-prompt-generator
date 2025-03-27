@@ -52,11 +52,11 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-10 h-10 bg-red-600 dark:bg-red-500 rounded-lg flex items-center justify-center"
+            className="w-8 h-8 bg-black dark:bg-white rounded-lg flex items-center justify-center"
           >
-            <span className="text-white font-bold">CT</span>
+            <span className="text-white dark:text-black font-bold">P</span>
           </motion.div>
-          <span className="font-medium text-lg">CODTECH</span>
+          <span className="font-medium text-lg">Portfolio</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-10">
@@ -72,7 +72,7 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
             >
               <Link
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                className="text-sm font-medium hover:text-red-600 dark:hover:text-red-400 transition-colors"
+                className="text-sm font-medium hover:text-black dark:hover:text-white transition-colors"
               >
                 {item}
               </Link>
@@ -84,9 +84,9 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="apple-button bg-red-600 text-white dark:bg-red-500"
+            className="apple-button bg-black text-white dark:bg-white dark:text-black"
           >
-            Start Task
+            Hire Me
           </motion.button>
         </div>
       </div>
