@@ -15,29 +15,29 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Immersive 3D Product Viewer",
-    description: "Interactive 3D product visualization with advanced lighting and animation effects.",
+    title: "3D Model Viewer",
+    description: "Interactive 3D model visualization with advanced lighting and animation effects using Three.js.",
     category: "Three.js / WebGL",
     imageSrc: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 2,
-    title: "E-Commerce Animation Suite",
-    description: "Smooth micro-interactions and page transitions for a premium shopping experience.",
+    title: "GSAP Animation Suite",
+    description: "Smooth micro-interactions and page transitions for premium user experiences using GSAP.",
     category: "GSAP / React",
     imageSrc: "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 3,
-    title: "Interactive Data Visualization",
-    description: "Dynamic, animated data charts and graphs with user interaction capabilities.",
+    title: "Interactive Data Dashboard",
+    description: "Dynamic, animated data visualizations with user interaction capabilities and real-time updates.",
     category: "D3.js / SVG Animation",
     imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 4,
-    title: "Portfolio Website Template",
-    description: "Elegant, animated portfolio design with scroll-based reveals and transitions.",
+    title: "Animated Landing Page",
+    description: "Elegant, animated landing page design with scroll-based reveals and smooth transitions.",
     category: "CSS Animation / React",
     imageSrc: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop"
   }
@@ -84,22 +84,32 @@ const ProjectsSection = () => {
     <section className="py-24 px-6 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <motion.h2 
-            className="text-3xl md:text-4xl font-bold mb-4"
+          <motion.span 
+            className="inline-block px-6 py-2 bg-blue-600 text-white font-bold rounded-lg mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Featured Projects
+            TASK-1
+          </motion.span>
+          
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold mb-4 task-heading"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            Project Gallery
           </motion.h2>
+          
           <motion.p
             className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Explore a selection of my most recent work showcasing advanced animations
-            and interactive experiences.
+            Explore a selection of my work showcasing advanced animations and interactive experiences
+            built with modern libraries like GSAP and Three.js.
           </motion.p>
         </div>
         
@@ -114,7 +124,7 @@ const ProjectsSection = () => {
             <motion.div
               key={project.id}
               variants={projectVariants}
-              className="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover-lift hover-glow"
+              className="task-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover-lift"
             >
               <div className="image-card aspect-video overflow-hidden">
                 <img 
@@ -126,7 +136,7 @@ const ProjectsSection = () => {
               </div>
               
               <div className="p-6">
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 mb-4">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 mb-4">
                   {project.category}
                 </span>
                 <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
@@ -157,7 +167,7 @@ const ProjectsSection = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="apple-button bg-white border border-gray-200 text-gray-900 dark:bg-gray-800 dark:text-white dark:border-gray-700"
+            className="apple-button bg-red-600 text-white"
           >
             View All Projects
           </motion.button>
