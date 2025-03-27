@@ -106,21 +106,23 @@ const HeroSection = () => {
           animate="visible"
           variants={buttonVariants}
         >
-          <motion.button 
+          <motion.a 
+            href="#projects" 
             className="apple-button bg-black text-white dark:bg-white dark:text-black"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Explore Projects
-          </motion.button>
+          </motion.a>
           
-          <motion.button 
+          <motion.a 
+            href="#contact" 
             className="apple-button bg-white border border-gray-200 text-gray-900 dark:bg-gray-800 dark:text-white dark:border-gray-700"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Contact Me
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
       
@@ -136,16 +138,17 @@ const HeroSection = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        <motion.div
+        <motion.a
+          href="#projects"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
-          className="flex flex-col items-center"
+          className="flex flex-col items-center cursor-pointer"
         >
           <span className="text-sm text-gray-500 dark:text-gray-400 mb-2">Scroll</span>
           <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 2V22M8 22L14 16M8 22L2 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-        </motion.div>
+        </motion.a>
       </motion.div>
     </div>
   );

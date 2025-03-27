@@ -81,7 +81,7 @@ const ProjectsSection = () => {
   };
   
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+    <section id="projects" className="py-24 px-6 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2 
